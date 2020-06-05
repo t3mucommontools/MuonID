@@ -1,12 +1,13 @@
 # MuonID
 MVA-based muonID
 
-##Training - samples:
+## Training - samples:
 * background = any **global** muon in events from BdToKK, BdToKPi, BdToPiPi, BsToKK, BsToPiPi MC samples having:
 ** pt > 2 GeV
 ** abs(eta) < 2.4
 ** valid MC info attached to the reco muon, i.e. *mu_simType != 0*
 ** matching at simulation level with pi or kaon reconstructed as muon or *true* muon from pi or K decay:
+
 |                                                                   | abs(eta) < 1.2 | abs(eta) >= 1.2 |
 |-------------------------------------------------------------------|----------------|-----------------|
 | pion: abs(simPdgId)==211                                          | 5.1%           | 1.5%            |
@@ -30,10 +31,10 @@ MVA-based muonID
 
 Code for muon selection is here: https://github.com/rvenditti/Tau3MuSearch/blob/master/MuonID_study/ntupleClass_muonid.C
 
-##Training - phasespace reweighting:
+## Training - phasespace reweighting:
 MuonID/Phase_space_reweighing_tools/PT_reweighting.cpp computes the signal/background ratio between the muon PT-ETA 2D histograms to be used for phasespace reweighting
 
-##Training - BDT input variables:
+## Training - BDT input variables:
 Defined in MuonID/MuonID_common.h
 ```C++
 std::vector<TString> var_MuonID_train_def = {
@@ -71,6 +72,11 @@ std::vector<TString> var_MuonID_train_def = {
                                       "mu_SoftMVA"
                                       };
 ```
+## Training - settings:
+* BDT training is done separately for barrel and endcap regions
+* All settings are in MuonID/MVA_muonid.cpp
 
-##Evaluation:
-weights are 
+## Evaluation:
+weights are in 
+* MuonID/MuonMVA_04june_TLWM_barrel/weights/
+* MuonID/MuonMVA_04june_TLWM_endcap/weights/

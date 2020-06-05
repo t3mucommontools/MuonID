@@ -36,7 +36,7 @@ Code for muon selection is here: https://github.com/rvenditti/Tau3MuSearch/blob/
 MuonID/Phase_space_reweighing_tools/PT_reweighting.cpp computes the signal/background ratio between the muon PT-ETA 2D histograms to be used for phasespace reweighting
 
 ## Training - BDT input variables:
-Defined in MuonID/MuonID_common.h
+Defined in https://github.com/t3mucommontools/MuonID/MuonID_common.h
 ```C++
 std::vector<TString> var_MuonID_train_def = {
                                       //Muon reconstruction
@@ -75,9 +75,9 @@ std::vector<TString> var_MuonID_train_def = {
 ```
 ## Training - settings:
 * BDT training is done separately for barrel and endcap regions
-* All settings are in MuonID/MVA_muonid.cpp
+* All settings are in https://github.com/t3mucommontools/MuonID/MVA_muonid.cpp
 
 ## Evaluation:
-weights are in 
-* MuonID/MuonMVA_04june_TLWM_barrel/weights/
-* MuonID/MuonMVA_04june_TLWM_endcap/weights/
+latest version of weights: 
+* https://github.com/t3mucommontools/MuonID/MuonMVA_04june_TLWM_barrel/weights/
+* https://github.com/t3mucommontools/MuonID/MuonMVA_04june_TLWM_endcap/weights/

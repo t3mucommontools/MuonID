@@ -3,10 +3,10 @@ MVA-based muonID
 
 ## Training - samples:
 * background = any **global** muon in events from BdToKK, BdToKPi, BdToPiPi, BsToKK, BsToPiPi MC samples having:
-** pt > 2 GeV
-** abs(eta) < 2.4
-** valid MC info attached to the reco muon, i.e. *mu_simType != 0*
-** matching at simulation level with pi or kaon reconstructed as muon or *true* muon from pi or K decay:
+  * pt > 2 GeV
+  * abs(eta) < 2.4
+  * valid MC info attached to the reco muon, i.e. *mu_simType != 0*
+  * matching at simulation level with pi or kaon reconstructed as muon or *true* muon from pi or K decay:
 
 |                                                                   | abs(eta) < 1.2 | abs(eta) >= 1.2 |
 |-------------------------------------------------------------------|----------------|-----------------|
@@ -17,14 +17,14 @@ MVA-based muonID
 | Total bkg size                                                    | 67453          | 115088          |
 
 * signal = events from DsTau3Mu and B0Tau3Mu MC samples with:
-** at least one triplet candidate per event
-** event fires *HLT_DoubleMu3_TkMu_DsTau3Mu*
-** triplet matches with tau->3mu at generator level
-** if N.triplet>1, best SV chi2 is chosen
-** trailing muon (mu3) is used, with requirement:
-*** **global** muon
-*** pt > 2 GeV
-*** abs(eta) < 2.4
+  * at least one triplet candidate per event
+  * event fires *HLT_DoubleMu3_TkMu_DsTau3Mu*
+  * triplet matches with tau->3mu at generator level
+  * if N.triplet>1, best SV chi2 is chosen
+  * trailing muon (mu3) is used, with requirement:
+    * **global** muon
+    * pt > 2 GeV
+    * abs(eta) < 2.4
 |                                                                   | abs(eta) < 1.2 | abs(eta) >= 1.2 |
 |-------------------------------------------------------------------|----------------|-----------------|
 | Total signal size                                                 | 84652          | 172620          |
